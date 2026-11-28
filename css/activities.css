@@ -1,0 +1,102 @@
+/* 맨 위 제목 영역 */
+.activities-hero {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+.activities-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+.activities-hero p {
+  color: var(--point);
+}
+
+/* 활동 하나 = 글 + 사진 가로 배치 */
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* 두 번째 섹션은 사진이 왼쪽, 글이 오른쪽 */
+.activity.reverse {
+  flex-direction: row-reverse;
+}
+
+.activity-text,
+.activity-photo {
+  flex: 1;
+}
+
+.activity-num {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--point);
+  letter-spacing: 2px;
+}
+
+.activity-text h2 {
+  font-size: 2rem;
+  margin: 8px 0 20px;
+}
+
+.activity-text p,
+.activity-text li {
+  line-height: 1.8;
+}
+
+.activity-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-text li.card {
+  border-left: 4px solid var(--point);
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+/* 사진 공통 */
+.activity-photo img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(21, 58, 112, 0.2);
+  display: block;
+}
+
+/* 제전 사진 2장은 세로로 쌓기 */
+.festival-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 사진 없을 때 자리 표시 */
+.photo-placeholder {
+  background: var(--bg);
+  color: var(--point);
+  border: 2px dashed var(--light);
+  text-align: center;
+  padding: 100px 20px;
+  border-radius: 12px;
+}
+
+/* 모바일: 768px 이하면 세로로 쌓기 */
+@media (max-width: 768px) {
+  .activity,
+  .activity.reverse {
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .activities-hero h1 {
+    font-size: 2rem;
+  }
+}
