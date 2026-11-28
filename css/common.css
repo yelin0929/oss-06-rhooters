@@ -1,0 +1,42 @@
+:root {
+    --main: #153A70;
+    --point: #377DCE;
+    --light: #A9D3F5;
+    --bg: #F1F6FC;
+    --text: #202B3C;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    color: var(--text);
+    background: white;
+}
+
+h1, h2, h3 {
+    color: var(--main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.btn {
+    background: var(--main);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+}
+
+.card {
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 24px;
+}
